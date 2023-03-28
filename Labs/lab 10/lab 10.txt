@@ -1,0 +1,48 @@
+
+
+1. One string (with a max of 100 chars) is read from SI. Transform the string so the left and the right half of the string will switch their places. 
+
+Note: All test cases will have an even number of chars.
+In C
+
+
+ 
+
+2.A number N, number K and char C are read from SI. After than, N strings are read from SI (each of them in a new line) 
+Print on SO all the strings which contain the char C exactly K times (ignore the case of the letters).
+If there are no such strings, print a message NONE.
+
+
+
+
+3.Write a function double relativeFrequency (char * fileName, char letter) that will determine the relative frequency of a letter in a text file named 'fileName'!.
+
+A relative frequency of a letter is calculated as the quotient between the count of occurrences of the letter and the total number of letters in the text. The case of the letter should be ignored (consider all letters as lower or upper letters!)
+
+After that, write a function void printRelativeFrequencies(char * fileName) that will utilize the previous function, and will calculate the relative frequencies of all the letters from the alphabet and then it will print them on standard output.
+
+
+
+This is the given code for the task , 
+#include <stdio.h>
+
+void writeToFile() {
+    FILE f = fopen("text.txt", "w");
+    char c;
+    while((c = getchar()) != '#') {
+        fputc(c, f);
+    }
+    fclose(f);
+}
+
+int main() {
+
+    /
+    DO NOT EDIT THE MAIN FUNCTION!!!!
+    DO NOT DELETE THE writeToFile FUNCTION!!!
+    */
+    writeToFile();
+
+    printRelativeFrequencies("text.txt");
+
+}
